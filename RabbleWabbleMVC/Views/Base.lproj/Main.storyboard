@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RabbleWabbleMVC" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="RabbleWabbleMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QuestionView" customModule="RabbleWabbleMVC" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -40,9 +40,8 @@
                                 <rect key="frame" x="32" y="711" width="80" height="80"/>
                                 <state key="normal" image="ic_circle_x"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-Ef-sk6">
-                                <rect key="frame" x="272" y="693" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-Ef-sk6">
+                                <rect key="frame" x="302" y="711" width="80" height="80"/>
                                 <state key="normal" image="ic_circle_check"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arx-sz-YFr">
@@ -51,9 +50,8 @@
                                 <color key="textColor" red="1" green="0.11691263798473295" blue="0.12543371629309441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohz-bu-2T1">
-                                <rect key="frame" x="291" y="817" width="20" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohz-bu-2T1">
+                                <rect key="frame" x="332" y="799" width="20" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.23299639236686542" green="1" blue="0.27475165159530035" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -63,24 +61,35 @@
                         <constraints>
                             <constraint firstItem="Ccm-GE-rZa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5vS-9V-J9M"/>
                             <constraint firstItem="Ccm-GE-rZa" firstAttribute="top" secondItem="Dwc-75-g8a" secondAttribute="bottom" constant="50" id="CF8-Fc-EbZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MsW-Ef-sk6" secondAttribute="trailing" constant="32" id="F7Z-NT-9uG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PPq-FC-bwj" secondAttribute="trailing" id="GrY-xI-Zyr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="arx-sz-YFr" secondAttribute="bottom" constant="24" id="Kh6-6h-tDN"/>
                             <constraint firstItem="Dwc-75-g8a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NAj-Rt-Yfc"/>
                             <constraint firstItem="arx-sz-YFr" firstAttribute="top" secondItem="n0n-6e-U94" secondAttribute="bottom" constant="8" id="NRF-50-B8K"/>
                             <constraint firstItem="PPq-FC-bwj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="QYr-ZI-rUv"/>
+                            <constraint firstItem="Ohz-bu-2T1" firstAttribute="top" secondItem="MsW-Ef-sk6" secondAttribute="bottom" constant="8" id="Rdx-Re-Bfr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ohz-bu-2T1" secondAttribute="bottom" constant="24" id="h8z-DI-9vL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ccm-GE-rZa" secondAttribute="trailing" id="i7r-Xc-tag"/>
                             <constraint firstItem="n0n-6e-U94" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="kCT-3z-qD7"/>
+                            <constraint firstItem="Ohz-bu-2T1" firstAttribute="centerX" secondItem="MsW-Ef-sk6" secondAttribute="centerX" id="n1e-TZ-qik"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dwc-75-g8a" secondAttribute="trailing" id="rCp-wD-ng4"/>
                             <constraint firstItem="arx-sz-YFr" firstAttribute="centerX" secondItem="n0n-6e-U94" secondAttribute="centerX" id="rcm-4w-HMf"/>
                             <constraint firstItem="Dwc-75-g8a" firstAttribute="top" secondItem="PPq-FC-bwj" secondAttribute="bottom" constant="8" id="sTS-1p-L10"/>
                             <constraint firstItem="PPq-FC-bwj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ygP-Xc-KKR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="answerLabel" destination="Ccm-GE-rZa" id="VAi-0r-rca"/>
+                            <outlet property="correctCountLabel" destination="Ohz-bu-2T1" id="8Vg-ZW-hin"/>
+                            <outlet property="hint" destination="Dwc-75-g8a" id="2Z1-5y-DuB"/>
+                            <outlet property="incorrectCountLabel" destination="arx-sz-YFr" id="sdR-TN-S7a"/>
+                            <outlet property="prompt" destination="PPq-FC-bwj" id="ZSn-98-Ozg"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+            <point key="canvasLocation" x="96" y="114"/>
         </scene>
     </scenes>
     <resources>
