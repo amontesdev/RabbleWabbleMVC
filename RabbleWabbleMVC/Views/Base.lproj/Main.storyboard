@@ -39,10 +39,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0n-6e-U94">
                                 <rect key="frame" x="32" y="711" width="80" height="80"/>
                                 <state key="normal" image="ic_circle_x"/>
+                                <connections>
+                                    <action selector="handleIncorrect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7HH-vc-16Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-Ef-sk6">
                                 <rect key="frame" x="302" y="711" width="80" height="80"/>
                                 <state key="normal" image="ic_circle_check"/>
+                                <connections>
+                                    <action selector="handleCorrect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NlI-bq-NEF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arx-sz-YFr">
                                 <rect key="frame" x="62" y="799" width="20" height="39"/>
@@ -58,6 +64,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Ccm-GE-rZa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5vS-9V-J9M"/>
                             <constraint firstItem="Ccm-GE-rZa" firstAttribute="top" secondItem="Dwc-75-g8a" secondAttribute="bottom" constant="50" id="CF8-Fc-EbZ"/>
@@ -84,10 +91,19 @@
                             <outlet property="hint" destination="Dwc-75-g8a" id="2Z1-5y-DuB"/>
                             <outlet property="incorrectCountLabel" destination="arx-sz-YFr" id="sdR-TN-S7a"/>
                             <outlet property="prompt" destination="PPq-FC-bwj" id="ZSn-98-Ozg"/>
+                            <outletCollection property="gestureRecognizers" destination="sEo-1y-3rf" appends="YES" id="kxf-s8-Qek"/>
+                            <outletCollection property="gestureRecognizers" destination="sEo-1y-3rf" appends="YES" id="Gag-YA-whv"/>
+                            <outletCollection property="gestureRecognizers" destination="sEo-1y-3rf" appends="YES" id="Asp-Lj-YRV"/>
+                            <outletCollection property="gestureRecognizers" destination="sEo-1y-3rf" appends="YES" id="VXn-Br-eMS"/>
                         </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sEo-1y-3rf">
+                    <connections>
+                        <action selector="toggleAnswerLabels:" destination="BYZ-38-t0r" id="8At-9Q-L5w"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="96" y="114"/>
         </scene>

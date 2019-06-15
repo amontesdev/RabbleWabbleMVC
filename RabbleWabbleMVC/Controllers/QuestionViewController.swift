@@ -35,8 +35,31 @@ class QuestionViewController: UIViewController {
         questionView.hint.text = question?.hint
         questionView.prompt.text = question?.prompt
         
-        questionView.answerLabel.isHidden = true
-        questionView.hint.isHidden = true
+        questionView.answerLabel.isHidden = false
+        questionView.hint.isHidden = false
+    }
+    
+    @IBAction func toggleAnswerLabels(_ sender: Any){
+        questionView.answerLabel.isHidden = !questionView.answerLabel.isHidden
+        questionView.hint.isHidden = !questionView.hint.isHidden
+    }
+    private func showNextQuestion(){
+        questionIndex += 1
+        guard  questionIndex < questionGroup.questions?.count ?? 0 else {
+            return
+        }
+        showQuestions()
+    }
+    @IBAction func handleCorrect(_ sender:Any){
+        correctCount += 1
+        questionView.correctCountLabel.text = "\(correctCount)"
+        showNextQuestion()
+    }
+    @IBAction func handleIncorrect(_ sender:Any){
+        incorrectCount += 1
+        questionView.incorrectCountLabel.text = "\(incorrectCount)"
+        showNextQuestion()
+        
     }
 
 
