@@ -17,6 +17,7 @@
 		0C404B8122AF57FE002A7FD1 /* QuestionGroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C404B8022AF57FE002A7FD1 /* QuestionGroupData.swift */; };
 		0C404B8322AF58BF002A7FD1 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C404B8222AF58BF002A7FD1 /* QuestionView.swift */; };
 		0C962F5C22B56B1000951680 /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C962F5B22B56B1000951680 /* SelectQuestionGroupViewController.swift */; };
+		0CAF4E2C22B9E456009DD3C6 /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF4E2B22B9E456009DD3C6 /* QuestionGroupCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0C404B8022AF57FE002A7FD1 /* QuestionGroupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionGroupData.swift; path = ../../../../../../Downloads/QuestionGroupData.swift; sourceTree = "<group>"; };
 		0C404B8222AF58BF002A7FD1 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		0C962F5B22B56B1000951680 /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
+		0CAF4E2B22B9E456009DD3C6 /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				0C404B6822AF4F28002A7FD1 /* Main.storyboard */,
 				0C404B6D22AF4F2A002A7FD1 /* LaunchScreen.storyboard */,
 				0C404B8222AF58BF002A7FD1 /* QuestionView.swift */,
+				0CAF4E2B22B9E456009DD3C6 /* QuestionGroupCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				0C404B8322AF58BF002A7FD1 /* QuestionView.swift in Sources */,
 				0C404B8122AF57FE002A7FD1 /* QuestionGroupData.swift in Sources */,
 				0C962F5C22B56B1000951680 /* SelectQuestionGroupViewController.swift in Sources */,
+				0CAF4E2C22B9E456009DD3C6 /* QuestionGroupCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
